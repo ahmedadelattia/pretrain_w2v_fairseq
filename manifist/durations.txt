@@ -1,0 +1,3 @@
+Train duration:  5234.667159340309  hours
+Valid duration:  52.77814166666668  hours
+Total duration:  5287.445301006976  hours
