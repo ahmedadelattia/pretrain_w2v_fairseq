@@ -32,6 +32,6 @@ avg_time = sum(times)/len(times)
 print("Average read time: ", avg_time, "seconds")
 speed_up_down = avg_time/0.006126663901589133*100
 if speed_up_down > 1:
-    print(f"Speed up: {speed_up_down:.02f}% than referense SSD (isrwkavw3180g)")
+    print(f"Read time is {speed_up_down:.02f}% slower than referense SSD (isrwkavw3180g)")
 else: 
-    print(f"Speed down: {speed_up_down:.02f}% than referense SSD (isrwkavw3180g)")
+    print(f"Read time is {speed_up_down:.02f}% faster than referense SSD (isrwkavw3180g)")
