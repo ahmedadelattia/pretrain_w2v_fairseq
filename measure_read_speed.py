@@ -28,4 +28,10 @@ for i in range(1, 100):
     print("Read time: ", end-start, "seconds")
     times.append(end-start)
     
-print("Average read time: ", sum(times)/len(times), "seconds")
+avg_time = sum(times)/len(times)
+print("Average read time: ", avg_time, "seconds")
+speed_up_down = avg_time/0.006126663901589133*100
+if speed_up_down > 1:
+    print(f"Speed up: {speed_up_down:.02f}% than referense SSD (isrwkavw3180g)")
+else: 
+    print(f"Speed down: {speed_up_down:.02f}% than referense SSD (isrwkavw3180g)")
