@@ -25,13 +25,15 @@ for i in range(1, 100):
     start = time.time()
     y, sr = librosa.load(file_path, sr=None)
     end = time.time()
+    if i == 1:
+        continue
     print("Read time: ", end-start, "seconds")
     times.append(end-start)
     
 avg_time = sum(times)/len(times)
 print("Average read time: ", avg_time, "seconds")
-speed_up_down = avg_time/0.006126663901589133*100
-if speed_up_down > 1:
-    print(f"Read time is {speed_up_down:.02f}% slower than reference SSD (isrwkavw3180g)")
+speed_up_down = avg_time/0.0011655651793187978*100
+if speed_up_down > 100:
+    print(f"Read time is {speed_up_down-100:.02f}% slower than reference SSD (isrwkavw3180g)")
 else: 
-    print(f"Read time is {speed_up_down:.02f}% faster than reference SSD (isrwkavw3180g)")
+    print(f"Read time is {100-speed_up_down:.02f}% faster than reference SSD (isrwkavw3180g)")
